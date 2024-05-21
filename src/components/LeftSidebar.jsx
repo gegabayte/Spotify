@@ -13,7 +13,7 @@ function LeftSidebar() {
     // `;
 
     return (
-        <div style={{ width: '20%', height: '400vh', background: '#000', color: '#B3B3B3', paddingTop: '50px', paddingLeft: '20px' }}>
+        <div style={{ width: '20%', minHeight: '400vh', background: '#000', color: '#B3B3B3', paddingTop: '50px', paddingLeft: '20px' }}>
             <div style={{display: 'flex', flexDirection: 'column' , gap: '25px'}}>
                 <div style={{display:'flex' , alignItems: 'center', gap: '25px'}}>
                     <img src={Home_icon} alt="" />
@@ -34,7 +34,7 @@ function LeftSidebar() {
                 </div>
                 <div style={{display:'flex' , alignItems: 'center', gap: '25px'}}>
                     <img src={Liked_icon} alt="" />
-                    <Link style={{fontSize: '18px', textDecoration: 'none' , color: 'white'}} to='/'>Create Playlist</Link>
+                    <Link style={{fontSize: '18px', textDecoration: 'none' , color: 'white'}} to='/'>Liked Songs</Link>
                 </div>
                 <hr style={{width: "90%", opacity: '0.2'}} />
             </div>

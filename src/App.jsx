@@ -3,8 +3,22 @@ import Layout from './layout/Layout'
 import Home from './pages/Home'
 import Likes from './pages/Likes'
 import Musics from './pages/Musics'
+import { useEffect } from 'react'
+import { getToken } from './components/utils'
+import { useDispatch } from 'react-redux'
+import { create } from './redux/AuthSlice'
 
 function App() {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    getToken()
+      .then(res => {
+        dispatch(create(res))
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  }, [])
   return (
     <>
       <Routes>
@@ -18,7 +32,7 @@ function App() {
             <Likes></Likes>
           </Layout>
         }></Route>
-        <Route path='/playlist/:id' element={
+        <Route path='/playlist' element={
           <Layout>
             <Musics></Musics>
           </Layout>

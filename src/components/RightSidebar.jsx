@@ -3,7 +3,7 @@ import Union1 from '../assets/Union1.svg'
 import Frame from '../assets/Frame.svg'
 function RightSidebar() {
     return (
-        <div style={{ width: '20%', height: '400vh', background: '#000', color: '#B3B3B3', paddingTop: '50px', paddingLeft: '20px', paddingRight: '20px' }}>
+        <div style={{ width: '20%', minHeight: '400vh', background: '#000', color: '#B3B3B3', paddingTop: '50px', paddingLeft: '20px', paddingRight: '20px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <h1>Friend Activity</h1>
                 <div style={{display: 'flex' , gap: '20px'}}>
